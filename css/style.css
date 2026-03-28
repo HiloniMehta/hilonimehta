@@ -1,5 +1,5 @@
 /* ============================================
-   DARSHAN KATESHIYA — PORTFOLIO
+   Hiloni Mehta — PORTFOLIO
    Premium, Case-Study-Focused Design System
    ============================================ */
 
@@ -23,9 +23,9 @@
   --border-light: #2a2a2a;
 
   /* Typography */
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -94,7 +94,8 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -106,13 +107,19 @@ button {
   color: inherit;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   font-size: inherit;
 }
 
 /* ---------- TYPOGRAPHY ---------- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 500;
   line-height: 1.15;
@@ -178,8 +185,9 @@ p {
   width: 100%;
   height: var(--nav-height);
   z-index: 1000;
-  transition: background var(--duration-normal) var(--ease-out),
-              border-color var(--duration-normal) var(--ease-out);
+  transition:
+    background var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out);
 }
 
 .nav.scrolled {
@@ -227,7 +235,7 @@ p {
 }
 
 .nav__link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -316,10 +324,18 @@ p {
   animation: mobileNavIn 0.5s var(--ease-out) forwards;
 }
 
-.nav__mobile.open .nav__mobile-link:nth-child(1) { animation-delay: 0.1s; }
-.nav__mobile.open .nav__mobile-link:nth-child(2) { animation-delay: 0.15s; }
-.nav__mobile.open .nav__mobile-link:nth-child(3) { animation-delay: 0.2s; }
-.nav__mobile.open .nav__mobile-link:nth-child(4) { animation-delay: 0.25s; }
+.nav__mobile.open .nav__mobile-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.nav__mobile.open .nav__mobile-link:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.nav__mobile.open .nav__mobile-link:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.nav__mobile.open .nav__mobile-link:nth-child(4) {
+  animation-delay: 0.25s;
+}
 
 @keyframes mobileNavIn {
   to {
@@ -413,8 +429,13 @@ p {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 .hero__title {
@@ -463,10 +484,21 @@ p {
 }
 
 @keyframes scrollLine {
-  0% { transform: scaleY(0); transform-origin: top; }
-  50% { transform: scaleY(1); transform-origin: top; }
-  51% { transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
 }
 
 /* ---------- WORK LIST ---------- */
@@ -797,7 +829,7 @@ p {
 }
 
 .role-item::before {
-  content: '—';
+  content: "—";
   color: var(--accent);
   flex-shrink: 0;
 }
@@ -1165,8 +1197,9 @@ p {
   border: 1px solid var(--border-light);
   border-radius: 100px;
   background: transparent;
-  transition: border-color var(--duration-fast) var(--ease-out),
-              color var(--duration-fast) var(--ease-out);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
   white-space: nowrap;
 }
 
@@ -1190,8 +1223,9 @@ p {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity var(--duration-slow) var(--ease-out),
-              transform var(--duration-slow) var(--ease-out);
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out);
 }
 
 .reveal.visible {
@@ -1199,27 +1233,52 @@ p {
   transform: translateY(0);
 }
 
-.reveal--delay-1 { transition-delay: 0.1s; }
-.reveal--delay-2 { transition-delay: 0.2s; }
-.reveal--delay-3 { transition-delay: 0.3s; }
-.reveal--delay-4 { transition-delay: 0.4s; }
+.reveal--delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal--delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal--delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal--delay-4 {
+  transition-delay: 0.4s;
+}
 
 /* Stagger children */
 .stagger-children > * {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s var(--ease-out),
-              transform 0.6s var(--ease-out);
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out);
 }
 
-.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; }
-.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
-.stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; }
-.stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; }
-.stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; }
-.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; }
-.stagger-children.visible > *:nth-child(7) { transition-delay: 0.35s; }
-.stagger-children.visible > *:nth-child(8) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.stagger-children.visible > *:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.stagger-children.visible > *:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.stagger-children.visible > *:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.stagger-children.visible > *:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.stagger-children.visible > *:nth-child(6) {
+  transition-delay: 0.3s;
+}
+.stagger-children.visible > *:nth-child(7) {
+  transition-delay: 0.35s;
+}
+.stagger-children.visible > *:nth-child(8) {
+  transition-delay: 0.4s;
+}
 
 .stagger-children.visible > * {
   opacity: 1;
@@ -1233,10 +1292,18 @@ p {
   animation: heroReveal 1s var(--ease-out) forwards;
 }
 
-.hero-anim--1 { animation-delay: 0.2s; }
-.hero-anim--2 { animation-delay: 0.4s; }
-.hero-anim--3 { animation-delay: 0.6s; }
-.hero-anim--4 { animation-delay: 0.8s; }
+.hero-anim--1 {
+  animation-delay: 0.2s;
+}
+.hero-anim--2 {
+  animation-delay: 0.4s;
+}
+.hero-anim--3 {
+  animation-delay: 0.6s;
+}
+.hero-anim--4 {
+  animation-delay: 0.8s;
+}
 
 @keyframes heroReveal {
   to {
@@ -1435,8 +1502,9 @@ p {
   z-index: 9999;
   opacity: 0;
   transform: scale(0);
-  transition: opacity 0.3s var(--ease-out),
-              transform 0.3s var(--ease-out);
+  transition:
+    opacity 0.3s var(--ease-out),
+    transform 0.3s var(--ease-out);
 }
 
 .custom-cursor.active {
@@ -1446,7 +1514,11 @@ p {
 
 /* Smooth image placeholder */
 .img-placeholder {
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-card) 0%,
+    var(--bg-elevated) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1470,8 +1542,9 @@ p {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity var(--duration-normal) var(--ease-out),
-              visibility var(--duration-normal) var(--ease-out);
+  transition:
+    opacity var(--duration-normal) var(--ease-out),
+    visibility var(--duration-normal) var(--ease-out);
   cursor: zoom-out;
 }
 
@@ -1525,7 +1598,7 @@ p {
 
 .image-lightbox__close::before,
 .image-lightbox__close::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 20px;
   height: 2px;
@@ -1574,7 +1647,7 @@ p {
 }
 
 .image-lightbox__nav::before {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   border-top: 2px solid var(--text-primary);
@@ -1614,20 +1687,20 @@ p {
     width: 40px;
     height: 40px;
   }
-  
+
   .image-lightbox__nav {
     width: 40px;
     height: 40px;
   }
-  
+
   .image-lightbox__nav--prev {
     left: var(--space-md);
   }
-  
+
   .image-lightbox__nav--next {
     right: var(--space-md);
   }
-  
+
   .image-lightbox__counter {
     bottom: var(--space-md);
     font-size: 0.75rem;
